@@ -6,15 +6,23 @@
 
 console.log('Starting app..');
 
-setTimeout(() => {
-    console.log('Inside of Timeout with 2 sec!');
-}, 2000);                               //2000 = 2 sec
+var a =1;
+var b =2;
 
-setTimeout(() => {
-    console.log('Inside 2nd Timeout with 0 sec');
-}, 0);                                 //0 = 0sec
+setTimeout(callback, 2000);                               //2000 = 2 sec
+
+setTimeout(callback2, 0);                                 //0 = 0sec
 
 console.log('Finishing up...');
+
+function callback(){
+    console.log('Inside of callback function 1');
+};
+
+function callback2(){ 
+    console.log('Inside of callback function 2');
+}
+
 
 
 /*OutPut:
